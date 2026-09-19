@@ -1,5 +1,5 @@
-# Homebrew formula for CWIST. Canonical source lives in the CWIST repository
-# at packaging/homebrew/cwist.rb; this file is the published tap copy.
+# Homebrew formula for CWIST. Maintained here and mirrored into the tap
+# repository c4punks/homebrew-cwist as Formula/cwist.rb.
 #
 # Before publishing a release:
 #   1. make dist
@@ -8,14 +8,13 @@
 class Cwist < Formula
   desc "C17 web framework and application server (HTTP/1.1, HTTP/2, HTTP/3, WebSocket, PQC TLS)"
   homepage "https://github.com/c4punks/CWIST"
-  url "https://github.com/c4punks/CWIST/releases/download/v3.4/cwist-3.4.tar.gz"
-  sha256 "c49533ec4c7758de6c2facab7c4ed7171c07b54a16aec29baf2224e4a01dc6d0"
+  url "https://github.com/c4punks/CWIST/releases/download/v3.5/cwist-3.5.tar.gz"
+  sha256 "d5d04936f839b12249218cc6992ee2a9bbf01a51e66e53094cd8797f99c23157"
   # The framework itself is MIT; the vendored components it statically links
-  # are Apache-2.0 (BoringSSL, cnats), MIT (lsquic, nghttp3, ngtcp2, cJSON,
+  # are Apache-2.0 (BoringSSL, cnats), MIT (lsquic, cJSON,
   # multipart-parser-c), BSD-3-Clause (libttak, uriparser, lsquic's Chromium
-  # portions), BSD-2-Clause (Monocypher; dual-licensed, BSD-2-Clause chosen
-  # over CC0-1.0), and SQLite (public domain, SPDX "blessing").
-  license all_of: ["MIT", "Apache-2.0", "BSD-2-Clause", "BSD-3-Clause", :public_domain]
+  # portions), and SQLite (public domain, SPDX "blessing").
+  license all_of: ["MIT", "Apache-2.0", "BSD-3-Clause", :public_domain]
 
   depends_on "cmake" => :build
   depends_on "pkg-config" => :build
