@@ -6,10 +6,10 @@
 #   2. upload dist/cwist-<version>.tar.gz to the GitHub release assets
 #   3. update `url` and `sha256` below
 class Cwist < Formula
-  desc "C17 web framework and application server (HTTP/1.1, HTTP/2, HTTP/3, WebSocket, PQC TLS)"
+  desc "C17 web framework and application server"
   homepage "https://github.com/c4punks/CWIST"
-  url "https://github.com/c4punks/CWIST/releases/download/v4.1/cwist-4.1.tar.gz"
-  sha256 "428352f1536343d3d949b3deb3d619fbde088f0dad4c0ba85ad80bbb2ec5e61a"
+  url "https://github.com/c4punks/CWIST/releases/download/v4.1.2/cwist-4.1.2.tar.gz"
+  sha256 "931690a482e5da2fcece49e5f5e10ac2cde970904735894e87437005be9ca1aa"
   # The framework itself is MIT; the vendored components it statically links
   # are Apache-2.0 (BoringSSL, cnats), MIT (lsquic, cJSON,
   # multipart-parser-c), BSD-3-Clause (libttak, uriparser, lsquic's Chromium
@@ -21,12 +21,12 @@ class Cwist < Formula
   depends_on "brotli"
   depends_on "zstd"
 
-  uses_from_macos "zlib"
   uses_from_macos "curl"
+  uses_from_macos "zlib"
 
   def install
-    system "make", "-j#{ENV.make_jobs}", "VERSION=4.1"
-    system "make", "install", "PREFIX=#{prefix}", "VERSION=4.1"
+    system "make", "-j#{ENV.make_jobs}", "VERSION=4.1.2"
+    system "make", "install", "PREFIX=#{prefix}", "VERSION=4.1.2"
   end
 
   test do
