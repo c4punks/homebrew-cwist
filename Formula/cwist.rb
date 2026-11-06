@@ -2,7 +2,7 @@ class Cwist < Formula
   desc "C17 web framework and application server"
   homepage "https://github.com/c4punks/CWIST"
   url "https://github.com/c4punks/CWIST/releases/download/v4.2.3/cwist-4.2.3.tar.gz"
-  sha256 "3fb3b0422d9136974128f7fba26f1f925c548116dc00186f19dff8003163e03c"
+  sha256 "a82cb9a58b0bae174156b41d7dabb4c6cf0ab4e2410ec705321f7dc04ee1770a"
   license all_of: ["MIT", "Apache-2.0", "BSD-3-Clause", :public_domain]
 
   depends_on "cmake" => :build
