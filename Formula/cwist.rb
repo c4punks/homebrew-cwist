@@ -1,19 +1,8 @@
-# Homebrew formula for CWIST. Maintained here and mirrored into the tap
-# repository c4punks/homebrew-cwist as Formula/cwist.rb.
-#
-# Before publishing a release:
-#   1. make dist
-#   2. upload dist/cwist-<version>.tar.gz to the GitHub release assets
-#   3. update `url` and `sha256` below
 class Cwist < Formula
   desc "C17 web framework and application server"
   homepage "https://github.com/c4punks/CWIST"
-  url "https://github.com/c4punks/CWIST/releases/download/v4.1.2/cwist-4.1.2.tar.gz"
-  sha256 "931690a482e5da2fcece49e5f5e10ac2cde970904735894e87437005be9ca1aa"
-  # The framework itself is MIT; the vendored components it statically links
-  # are Apache-2.0 (BoringSSL, cnats), MIT (lsquic, cJSON,
-  # multipart-parser-c), BSD-3-Clause (libttak, uriparser, lsquic's Chromium
-  # portions), and SQLite (public domain, SPDX "blessing").
+  url "https://github.com/c4punks/CWIST/releases/download/v4.2.2/cwist-4.2.2.tar.gz"
+  sha256 "3bc655b5937f491f577021375b5d81fded613b69953678d51f601a29d75dfa6d"
   license all_of: ["MIT", "Apache-2.0", "BSD-3-Clause", :public_domain]
 
   depends_on "cmake" => :build
@@ -25,8 +14,8 @@ class Cwist < Formula
   uses_from_macos "zlib"
 
   def install
-    system "make", "-j#{ENV.make_jobs}", "VERSION=4.1.2"
-    system "make", "install", "PREFIX=#{prefix}", "VERSION=4.1.2"
+    system "make", "-j#{ENV.make_jobs}", "VERSION=4.2.2"
+    system "make", "install", "PREFIX=#{prefix}", "VERSION=4.2.2"
   end
 
   test do
