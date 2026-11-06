@@ -16,8 +16,8 @@ class CwistAT421 < Formula
   uses_from_macos "zlib"
 
   def install
-    system "make", "-j#{ENV.make_jobs}", "VERSION=4.2.1"
-    system "make", "install", "PREFIX=#{prefix}", "VERSION=4.2.1"
+    system "make", "-j#{ENV.make_jobs}", "CWIST_SQLITE_FTS5=1", "VERSION=4.2.1"
+    system "make", "install", "PREFIX=#{prefix}", "CWIST_SQLITE_FTS5=1", "VERSION=4.2.1"
   end
 
   test do
