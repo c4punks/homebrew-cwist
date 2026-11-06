@@ -11,11 +11,23 @@ brew tap c4punks/cwist
 brew install cwist
 ```
 
+`cwist` and its `cwist@4` alias install the latest published v4 patch release
+from the formula. Update the tap before upgrading:
+
+```sh
+brew update
+brew upgrade cwist
+```
+
 Or install directly without tapping:
 
 ```sh
-brew install c4punks/cwist/cwist
+brew install c4punks/cwist/cwist@4
 ```
+
+Use a versioned formula such as `cwist@4.2.3` only when an exact release must
+remain pinned. Livecheck follows the latest semantic v4 release and ignores
+the dated `v4-patch-*` snapshots.
 
 The formula builds from the release source tarball
 (`dist/cwist-<version>.tar.gz`, vendored dependencies included) and installs

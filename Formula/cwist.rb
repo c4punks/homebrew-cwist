@@ -5,6 +5,11 @@ class Cwist < Formula
   sha256 "1e480e1769bc22976c6c11e9a3c8ae9dbd82384e4e797898648262e8e62c338f"
   license all_of: ["MIT", "Apache-2.0", "BSD-3-Clause", :public_domain]
 
+  livecheck do
+    url :stable
+    strategy :github_latest
+  end
+
   depends_on "cmake" => :build
   depends_on "pkg-config" => :build
   depends_on "brotli"
