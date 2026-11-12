@@ -27,7 +27,12 @@ brew install c4punks/cwist/cwist@4
 
 Use a versioned formula such as `cwist@4.2.6` only when an exact release must
 remain pinned. Livecheck follows the latest semantic v4 release and ignores
-the dated `v4-patch-*` snapshots.
+the dated `v4-patch-*` snapshots. Install a dated LTS snapshot by its exact
+formula name, for example:
+
+```sh
+brew install c4punks/cwist/cwist@4.20261113
+```
 
 The formula builds from the release source tarball
 (`dist/cwist-<version>.tar.gz`, vendored dependencies included) and installs
