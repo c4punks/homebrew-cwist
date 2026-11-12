@@ -1,8 +1,8 @@
 class Cwist < Formula
   desc "C17 web framework and application server"
   homepage "https://github.com/c4punks/CWIST"
-  url "https://github.com/c4punks/CWIST/releases/download/v4.2.4/cwist-4.2.4.tar.gz"
-  sha256 "bba4c75b9bdf18edcdfa7379bd47544607fe8bcde36588a7f11cbd403896dd4b"
+  url "https://github.com/c4punks/CWIST/releases/download/v4.2.5/cwist-4.2.5.tar.gz"
+  sha256 "59f8c8d11144601fa002e2ff86ac9e62c7bb871a44ae0b58081bd4f9068def92"
   license all_of: ["MIT", "Apache-2.0", "BSD-3-Clause", :public_domain]
 
   livecheck do
@@ -19,8 +19,8 @@ class Cwist < Formula
   uses_from_macos "zlib"
 
   def install
-    system "make", "-j#{ENV.make_jobs}", "CWIST_SQLITE_FTS5=1", "VERSION=4.2.4"
-    system "make", "install", "PREFIX=#{prefix}", "CWIST_SQLITE_FTS5=1", "VERSION=4.2.4"
+    system "make", "-j#{ENV.make_jobs}", "CWIST_SQLITE_FTS5=1", "VERSION=4.2.5"
+    system "make", "install", "PREFIX=#{prefix}", "CWIST_SQLITE_FTS5=1", "VERSION=4.2.5"
   end
 
   test do
