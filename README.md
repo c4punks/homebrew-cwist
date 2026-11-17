@@ -31,7 +31,7 @@ the dated `v4-patch-*` snapshots. Install a dated LTS snapshot by its exact
 formula name, for example:
 
 ```sh
-brew install c4punks/cwist/cwist@4.20261115
+brew install c4punks/cwist/cwist@4.20261117
 ```
 
 The formula builds from the release source tarball
