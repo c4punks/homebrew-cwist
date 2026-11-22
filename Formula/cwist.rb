@@ -3,6 +3,7 @@ class Cwist < Formula
   homepage "https://github.com/c4punks/CWIST"
   url "https://github.com/c4punks/CWIST/releases/download/v4-patch-20261122-p1/cwist-4-patch-20261122-p1.tar.gz"
   sha256 "ee649833c26ff0913305780ac1396eb838765e10e7262751f6fc9762f06f1a49"
+  version "20261122.1"
   license all_of: ["MIT", "Apache-2.0", "BSD-3-Clause", :public_domain]
 
   livecheck do
